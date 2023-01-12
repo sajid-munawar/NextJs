@@ -1,20 +1,32 @@
-'use client';
-import React from 'react'
+"use client";
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
-async function addTodoItem(text:string) {
-  // await fetch(`http://localhost:3001/api/todo/list`,{
-  //   method:"POST",
-  // })
-  console.log(text);
-  
+async function addTodoItem(name: string, refresh: { (): void; (): void }) {
+  await fetch(`/api/todo/add`, {
+    method: "POST",
+    body: JSON.stringify({ name }),
+  });
+  refresh();
 }
 
-
 export default function AddTodo() {
+  let router = useRouter();
+  let [name, setName] = useState("");
   return (
     <div>
-    <input type="text" />
-    <button type='submit' onClick={()=>addTodoItem('Aa')}>Add</button>
-  </div>
-  )
+      <input
+        type="text"
+        onChange={(e) => setName(e.target.value)}
+        value={name}
+      />
+      <button type="submit"
+       onClick={ async()=>{
+         await addTodoItem(name, router.refresh)
+         setName('')
+        }}>
+        Add
+      </button>
+    </div>
+  );
 }

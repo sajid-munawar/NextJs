@@ -48,7 +48,7 @@ export default function Todo({
       />
       {todo.name}
       <button onClick={() => deleteTodo(todo.id, router.refresh)}>
-        Delete
+        x
       </button>
     </>
   );

@@ -13,10 +13,10 @@ export default async function Page() {
     <div>
       <AddTodo />
       <div>
-        <ul style={{ listStyle: "none" }}>
+        <ul style={{ listStyle: "none"}}>
           {todos.map((t: { id: string; name: string; isDone: boolean }) => {
             return (
-              <li key={t.id}>
+              <li key={t.id} style={{ display:'flex',justifyContent:'space-between',maxWidth:185 }}>
                 <Todo todo={t} />
               </li>
             );

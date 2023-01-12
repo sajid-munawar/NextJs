@@ -1,21 +1,28 @@
-import React from 'react'
+import React from "react";
+import AddTodo from "./add-todo";
+import Todo from "./todo";
 
+let getTodo = async function () {
+  let todos = await fetch("http://localhost:3001/api/todo/list");
+  return todos.json();
+};
 
-let todos=async function(){
-  let res=await fetch('http://localhost:3001/api/todo/list')
-  let data=await res.json()
-  console.log('AAAAAAAAAAAAAAAAAAaa',data.todos)
-  return data.todos
-}
-todos()
-
-export default function Page() {
+export default async function Page() {
+  let { todos } = await getTodo();
   return (
     <div>
+      <AddTodo />
       <div>
-      <input type="text" />
-      <button type='submit'>Add</button>
+        <ul style={{ listStyle: "none" }}>
+          {todos.map((t: { id: string; name: string; isDone: boolean }) => {
+            return (
+              <li key={t.id}>
+                <Todo todo={t} />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
-    </div>
-  )
+  );
 }

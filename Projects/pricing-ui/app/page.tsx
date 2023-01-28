@@ -1,13 +1,15 @@
 'use client';
 
-import PricingUi from './components/pricingUi'
+import Header from './components/Header'
 import { ChakraProvider } from '@chakra-ui/react'
+import PricingCard from './components/pricingCard';
 
 export default function Home() {
   return (<>
   <div>
     <ChakraProvider>
-      <PricingUi/>
+      <Header/>
+      <PricingCard/>
     </ChakraProvider>
   </div>
     </>

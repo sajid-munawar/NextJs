@@ -1,11 +1,12 @@
 "use client";
+import { DeleteIcon } from "@chakra-ui/icons";
 import {
   Button,
   ChakraProvider,
   HStack,
   Input,
   List,
-  ListItem,
+  ListItem
 } from "@chakra-ui/react";
 import { Heading, Box, Text } from "@chakra-ui/react";
 import { useState } from "react";
@@ -59,15 +60,16 @@ export default function Page() {
           {todos.map((todo: any) => {
             return (
               <>
-                <HStack spacing="10px">
+                <HStack spacing="10px" key={todo.todoText}>
                   <input
                     type="checkbox"
                     checked={todo.completed}
-                    onClick={() => {
+                    onChange={() => {
                       checkedHandler(todo);
                     }}
                   />
                   <Text>{todo.todoText}</Text>
+                  <DeleteIcon />
                 </HStack>
               </>
             );

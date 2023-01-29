@@ -1,9 +1,17 @@
 "use client";
-import { ChakraProvider, HStack, List, ListItem } from "@chakra-ui/react";
+import {
+  Button,
+  ChakraProvider,
+  HStack,
+  Input,
+  List,
+  ListItem,
+} from "@chakra-ui/react";
 import { Heading, Box, Text } from "@chakra-ui/react";
 import { useState } from "react";
 
 export default function Page() {
+  const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([
     {
       todoText: "Abc",
@@ -25,12 +33,28 @@ export default function Page() {
     setTodos(newTodo);
   };
 
+  const InputHandler = () => {
+    let newTodo = { todoText: todo, completed: false };
+    let newTodos = [newTodo, ...todos];
+    setTodos(newTodos);
+    setTodo('')
+  };
   return (
     <>
       <ChakraProvider>
         <Heading as="h1" style={{ textAlign: "center" }} color="red" pt="1em">
           Todo App
         </Heading>
+        <Input
+          type="text"
+          value={todo}
+          onChange={(e:any) => {
+            setTodo(e.target.value);
+          }}
+        />
+        <Button colorScheme="purple" type="submit" onClick={InputHandler}>
+          Add
+        </Button>
         <Box maxWidth="500px" bg="gray" m="auto">
           {todos.map((todo: any) => {
             return (

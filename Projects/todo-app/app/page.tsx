@@ -5,8 +5,6 @@ import {
   ChakraProvider,
   HStack,
   Input,
-  List,
-  ListItem
 } from "@chakra-ui/react";
 import { Heading, Box, Text } from "@chakra-ui/react";
 import { useState } from "react";
@@ -38,7 +36,14 @@ export default function Page() {
     let newTodo = { todoText: todo, completed: false };
     let newTodos = [newTodo, ...todos];
     setTodos(newTodos);
-    setTodo('')
+    setTodo("");
+  };
+
+  const deleteHandler = (currTodo: any) => {
+    let newTodos = todos.filter((t) => {
+      return t.todoText != currTodo.todoText;
+    });
+    setTodos(newTodos);
   };
   return (
     <>
@@ -49,7 +54,7 @@ export default function Page() {
         <Input
           type="text"
           value={todo}
-          onChange={(e:any) => {
+          onChange={(e: any) => {
             setTodo(e.target.value);
           }}
         />
@@ -69,7 +74,11 @@ export default function Page() {
                     }}
                   />
                   <Text>{todo.todoText}</Text>
-                  <DeleteIcon />
+                  <DeleteIcon
+                    onClick={() => {
+                      deleteHandler(todo);
+                    }}
+                  />
                 </HStack>
               </>
             );

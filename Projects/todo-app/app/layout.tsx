@@ -11,7 +11,6 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <h1 style={{textAlign:'center'}}>Todo App</h1>
         {children}
         </body>
     </html>

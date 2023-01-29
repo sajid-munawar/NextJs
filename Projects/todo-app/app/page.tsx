@@ -1,28 +1,55 @@
-import React from "react";
-import AddTodo from "./add-todo";
-import Todo from "./todo";
+"use client";
+import { ChakraProvider, HStack, List, ListItem } from "@chakra-ui/react";
+import { Heading, Box, Text } from "@chakra-ui/react";
+import { useState } from "react";
 
-let getTodo = async function () {
-  let todos = await fetch("http://localhost:3001/api/todo/list");
-  return todos.json();
-};
+export default function Page() {
+  const [todos, setTodos] = useState([
+    {
+      todoText: "Abc",
+      completed: false,
+    },
+    {
+      todoText: "gef",
+      completed: true,
+    },
+  ]);
 
-export default async function Page() {
-  let { todos } = await getTodo();
+  const checkedHandler = (currentTodo: any) => {
+    let newTodo = todos.map((t) => {
+      if (t.todoText == currentTodo.todoText) {
+        t.completed = !t.completed;
+      }
+      return t;
+    });
+    setTodos(newTodo);
+  };
+
   return (
-    <div>
-      <AddTodo />
-      <div>
-        <ul style={{ listStyle: "none"}}>
-          {todos.map((t: { id: string; name: string; isDone: boolean }) => {
+    <>
+      <ChakraProvider>
+        <Heading as="h1" style={{ textAlign: "center" }} color="red" pt="1em">
+          Todo App
+        </Heading>
+        <Box maxWidth="500px" bg="gray" m="auto">
+          {todos.map((todo: any) => {
             return (
-              <li key={t.id} style={{ display:'flex',justifyContent:'space-between',maxWidth:185 }}>
-                <Todo todo={t} />
-              </li>
+              <>
+                <HStack spacing="10px">
+                  <input
+                    type="checkbox"
+                    checked={todo.completed}
+                    onClick={() => {
+                      checkedHandler(todo);
+                    }}
+                  />
+                  <Text>{todo.todoText}</Text>
+                </HStack>
+              </>
             );
           })}
-        </ul>
-      </div>
-    </div>
+        </Box>
+      </ChakraProvider>
+    </>
   );
 }

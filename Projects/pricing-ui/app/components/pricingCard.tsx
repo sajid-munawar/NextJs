@@ -6,8 +6,22 @@ import {
   Button,
   Flex,
   Image,
+  Icon,
+  StackProps,
+  Stack,
+  HStack,
 } from "@chakra-ui/react";
 import Circle from "../assets/mdCheckedCircle/circle";
+
+export const ListItem=(props:StackProps)=>{
+  const {children,...rest}=props;
+  return (
+    <HStack as='li' spacing='20px' {...rest}>
+      <Icon as={Circle} w='22px' h='22px' />
+      <Text>{children}</Text>
+    </HStack>
+  )
+}
 
 export default function PricingCard() {
   return (
@@ -33,7 +47,13 @@ export default function PricingCard() {
               Access these features when you get this pricing package for your
               business.
             </Text>
-            {/* <Image src={Circle} /> */}
+            <Stack as='ul'>
+              <ListItem>International calling and messaging API</ListItem>
+              <ListItem>International calling and messaging API</ListItem>
+              <ListItem>International calling and messaging API</ListItem>
+              <ListItem>International calling and messaging API</ListItem>
+            </Stack>
+
           </Box>
         </Flex>
       </Box>

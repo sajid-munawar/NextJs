@@ -13,22 +13,13 @@ import {
 } from "@chakra-ui/react";
 import Circle from "../assets/mdCheckedCircle/circle";
 
-export const ListItem=(props:StackProps)=>{
-  const {children,...rest}=props;
-  return (
-    <HStack as='li' spacing='20px' {...rest}>
-      <Icon as={Circle} w='22px' h='22px' />
-      <Text>{children}</Text>
-    </HStack>
-  )
-}
-
 export default function PricingCard() {
   return (
     <>
-      <Box>
+      <Box mt="-150px" mx="auto" maxW="950px" bg="white" borderRadius={'12px'}
+      overflow='hidden' boxShadow={'2xl'}>
         <Flex>
-          <Box bg="#E5E5E5" p="60px" textAlign={'center'}>
+          <Box bg="#E5E5E5" p="60px" textAlign={"center"}>
             <Heading fontSize={"24px"} fontWeight={"800"}>
               Premium PRO
             </Heading>
@@ -42,18 +33,27 @@ export default function PricingCard() {
               Get Started
             </Button>
           </Box>
-          <Box>
-            <Text fontSize={"18px"} fontWeight={"400"}>
+          <Box fontSize={"18px"} textAlign="left" p="48px" fontWeight="400">
+            <Text pb={"4"}>
               Access these features when you get this pricing package for your
               business.
             </Text>
-            <Stack as='ul'>
-              <ListItem>International calling and messaging API</ListItem>
-              <ListItem>International calling and messaging API</ListItem>
-              <ListItem>International calling and messaging API</ListItem>
-              <ListItem>International calling and messaging API</ListItem>
-            </Stack>
-
+            <HStack pb="2">
+              <Icon as={Circle} />
+              <Text>International calling and messaging API</Text>
+            </HStack>
+            <HStack pb="2">
+              <Icon as={Circle} />
+              <Text>Additional phone numbers</Text>
+            </HStack>
+            <HStack pb="2">
+              <Icon as={Circle} />
+              <Text>Automated messages via Zapier</Text>
+            </HStack>
+            <HStack pb="2">
+              <Icon as={Circle} />
+              <Text>24/7 support and consulting</Text>
+            </HStack>
           </Box>
         </Flex>
       </Box>

@@ -1,23 +1,18 @@
-import {
-  Box,
-  Heading,
-  Text,
-  VStack,
-  Button,
-  Flex,
-  Image,
-  Icon,
-  StackProps,
-  Stack,
-  HStack,
-} from "@chakra-ui/react";
-import Circle from "../assets/mdCheckedCircle/circle";
+import { Box,Text, Button, Flex, Heading, HStack, Icon } from "@chakra-ui/react";
+import Circle from "../assets/circle";
 
 export default function PricingCard() {
   return (
     <>
-      <Box mt="-150px" mx="auto" maxW="950px" bg="white" borderRadius={'12px'}
-      overflow='hidden' boxShadow={'2xl'}>
+      <Box
+        mt="-150px"
+        mx="auto"
+        maxW="950px"
+        bg="white"
+        borderRadius={"12px"}
+        overflow="hidden"
+        boxShadow={"2xl"}
+      >
         <Flex>
           <Box bg="#E5E5E5" p="60px" textAlign={"center"}>
             <Heading fontSize={"24px"} fontWeight={"800"}>

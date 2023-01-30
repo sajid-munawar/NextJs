@@ -28,7 +28,7 @@ export default function PricingCard() {
               Get Started
             </Button>
           </Box>
-          <Box fontSize={"18px"} textAlign="left" p="48px" fontWeight="400">
+          <Box fontSize={"18px"} textAlign="left" p={['20px','30px',"48px"]} fontWeight="400">
             <Text pb={"4"}>
               Access these features when you get this pricing package for your
               business.

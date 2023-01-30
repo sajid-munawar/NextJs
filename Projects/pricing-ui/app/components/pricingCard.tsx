@@ -6,25 +6,25 @@ export default function PricingCard() {
     <>
       <Box
         mt="-150px"
-        mx="auto"
         maxW="950px"
+        mx={['22px','30px','auto']}
         bg="white"
         borderRadius={"12px"}
         overflow="hidden"
         boxShadow={"2xl"}
       >
-        <Flex>
+        <Flex flexDirection={['column','column','row']}>
           <Box bg="#E5E5E5" p="60px" textAlign={"center"}>
             <Heading fontSize={"24px"} fontWeight={"800"}>
               Premium PRO
             </Heading>
-            <Text fontSize={"60px"} fontWeight={"800"}>
+            <Text fontSize={['48px','52px',"60px"]} fontWeight={"800"}>
               $329
             </Text>
             <Text fontSize={"18px"} fontWeight={"500"}>
               billed just once
             </Text>
-            <Button colorScheme={"purple"} size="lg" w="282px" mt="24px">
+            <Button colorScheme={"purple"} size="lg" maxW="282px" mt="24px">
               Get Started
             </Button>
           </Box>

@@ -9,7 +9,7 @@ export default function Header() {
         bg="#6B46C1"
         textAlign={["left", "left", "center"]}
         color="#F7FAFC"
-        pt="90px"
+        pt={['60px','72px',"90px"]}
         pb="198px"
         px="32px"
       >

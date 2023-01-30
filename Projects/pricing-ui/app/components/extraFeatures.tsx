@@ -6,19 +6,19 @@ import NosetupFee from "../assets/noSetupFee";
 
 export default function ExtraFeatures() {
   return (
-    <Box maxW="950px" mx="auto" fontSize={"18px"} fontWeight="700" pt="60px">
-      <Flex>
-        <HStack>
-          <Icon as={MoneyBack} />
-          <Text>30 days money back Guarantee</Text>
+    <Box maxW="950px" mx={['22px','25px',"auto"]} fontSize={"18px"} fontWeight="700" py="60px">
+      <Flex flexDirection={['column','column','row']}>
+        <HStack  pb={'20px'}>
+          <Icon as={MoneyBack}/>
+          <Text pl='15px'>30 days money back Guarantee</Text>
         </HStack>
-        <HStack>
+        <HStack  pb={'20px'}>
           <Icon as={NosetupFee} />
-          <Text>No setup fees 100% hassle-free</Text>
+          <Text pl='15px'>No setup fees 100% hassle-free</Text>
         </HStack>
         <HStack>
           <Icon as={NoMonthlyFee} />
-          <Text>No setup fees 100% hassle-free</Text>
+          <Text pl='15px'>No setup fees 100% hassle-free</Text>
         </HStack>
       </Flex>
     </Box>

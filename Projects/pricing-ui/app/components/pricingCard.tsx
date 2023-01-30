@@ -14,7 +14,7 @@ export default function PricingCard() {
         boxShadow={"2xl"}
       >
         <Flex flexDirection={['column','column','row']}>
-          <Box bg="#E5E5E5" p="60px" textAlign={"center"}>
+          <Box bg="#E5E5E5" py={['40px','50px',"60px"]} textAlign={"center"} width={['auto','auto','378px']}>
             <Heading fontSize={"24px"} fontWeight={"800"}>
               Premium PRO
             </Heading>
@@ -24,7 +24,7 @@ export default function PricingCard() {
             <Text fontSize={"18px"} fontWeight={"500"}>
               billed just once
             </Text>
-            <Button colorScheme={"purple"} size="lg" maxW="282px" mt="24px">
+            <Button colorScheme={"purple"} size="lg" maxW="282px" mt="24px" px='75px'>
               Get Started
             </Button>
           </Box>
@@ -35,19 +35,19 @@ export default function PricingCard() {
             </Text>
             <HStack pb="2">
               <Icon as={Circle} />
-              <Text>International calling and messaging API</Text>
+              <Text pl='15px'>International calling and messaging API</Text>
             </HStack>
             <HStack pb="2">
               <Icon as={Circle} />
-              <Text>Additional phone numbers</Text>
+              <Text pl='15px'>Additional phone numbers</Text>
             </HStack>
             <HStack pb="2">
               <Icon as={Circle} />
-              <Text>Automated messages via Zapier</Text>
+              <Text pl='15px'>Automated messages via Zapier</Text>
             </HStack>
             <HStack pb="2">
               <Icon as={Circle} />
-              <Text>24/7 support and consulting</Text>
+              <Text pl='15px'>24/7 support and consulting</Text>
             </HStack>
           </Box>
         </Flex>

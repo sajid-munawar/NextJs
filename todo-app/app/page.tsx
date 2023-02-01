@@ -7,11 +7,24 @@ import {
   Container,
   HStack,
   Input,
+  ColorModeScript,
+  extendTheme,
+  useColorMode
 } from "@chakra-ui/react";
 import { Heading, Box, Text } from "@chakra-ui/react";
 import { useState } from "react";
 
+const config= {
+  initialColorMode:'light',
+  useSystemColorMode:'false',
+}
+
+const theme=extendTheme({
+  config,
+})
+
 export default function Page() {
+  const { toggleColorMode } = useColorMode();
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([
     {
@@ -52,12 +65,15 @@ export default function Page() {
   return (
     <>
       <ChakraProvider>
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+
         <Box
           w="100&"
           height="100vh"
           bgGradient="linear(red.100 0%, orange.100 25%, yellow.100 50%)"
         >
           <Container>
+            <Button onClick={toggleColorMode}>click me</Button>
             <Heading
               as="h1"
               bgGradient="linear(to-l, #7928CA, #FF0080)"

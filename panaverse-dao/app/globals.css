@@ -3,3 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.bgImage {
+  background-image: url("/download.svg");
+  height: 100%;
+  width: 100%;
+}
+
+.gettingReady {
+  margin: 50px;
+  border-radius: 25px;
+  max-width: 576px;
+  height: 384px;
+}

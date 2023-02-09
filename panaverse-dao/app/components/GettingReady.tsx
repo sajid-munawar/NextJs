@@ -14,11 +14,11 @@ export const GettingReady = () => {
           className="gettingReady"
         />
       </Box>
-      <Box maxWidth="40%" padding="10px">
-        <Heading textAlign="center">
+      <Box maxWidth="40%" padding="10px" textAlign="center">
+        <Heading >
           Getting Ready for the Next Generation of the Internet
         </Heading>
-        <Text fontSize='2xl' pt='10px'>
+        <Text fontSize='2xl' pt='20px'>
           Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI), Cloud,
           Edge, Ambient Computing/IoT, Network Automation, and Bioinformatics
           Technologies{" "}

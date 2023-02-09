@@ -1,4 +1,5 @@
 import { Alumni } from "./components/Alumni";
+import { Footer } from "./components/Footer";
 import { GettingReady } from "./components/GettingReady";
 import { Header } from "./components/Header";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <GettingReady />
       <Alumni/>
+      <Footer/>
     </>
   );
 }

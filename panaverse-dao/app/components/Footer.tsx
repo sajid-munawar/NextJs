@@ -11,14 +11,16 @@ export const Footer = () => {
     <>
       <Box bgColor="#DFD3BB" py="50px">
         <Flex
+        flexDir={['column','column','row']}
           gap="20px"
-          justifyContent="space-around"
+          justifyContent={['center','center',"space-around"]}
+          alignItems={['center','center',"space-around"]}
           py="50px"
           fontSize="17px"
           fontWeight="500"
           lineHeight="130%"
         >
-          <Flex flexDirection="column" gap="10px">
+          <Flex flexDirection={['row','row',"column"]} gap="10px">
             <Heading as="h6" size="md" pb="20px">
               Follow us
             </Heading>

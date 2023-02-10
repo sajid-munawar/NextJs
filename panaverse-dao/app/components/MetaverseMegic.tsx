@@ -6,15 +6,15 @@ import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 
 export const MetaverseMegic = () => {
   return (
-    <Flex justifyContent="space-around" alignItems="center" py='50px'>
-      <Box maxWidth="50%">
+    <Flex justifyContent={['flex-start','flex-start',"space-around" ]} alignItems="center" flexDir={['column','column','row']} py={['0','0','50px']}>
+      <Box maxWidth={['100%','100%',"50%"]} >
         <Image
           src={metaverseMegic}
           alt="getting ready"
           className="gettingReady"
         />
       </Box>
-      <Box maxWidth="40%" padding="10px" textAlign="center">
+      <Box maxWidth={['100%','100%',"40%"]} py="10px" px='30px' textAlign="center">
         <Heading>Metaverse Will Change Your Life Forever</Heading>
         <Box textAlign="start">
           <Text as="i" fontSize="2xl" pt="20px">

@@ -1,5 +1,5 @@
 "use client";
-import { Box, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import ziaK from "../assets/zia_khan.jpg";
 import daniyalN from "../assets/daniyal_nagori.jpeg";
@@ -21,49 +21,52 @@ const faculty = [
     title: "Daniyal Nagori",
     designation: "Software Development Lead at Panacloud Pvt Ltd",
     details:
-      "Certified Kubernetes Application Developer AWS Certified Developer Coursera React Native Nano Degree. I have been fortunate to be able to architect solutions in as wide an array as Cloud Native, Voice Computing/Chatbot development, Web, Mobile, AI, and Blockchain. ",
+      "Certified Kubernetes Application Developer AWS Certified Developer Coursera React Native Nano Degree. I have been fortunate to be able to architect solutions in as wide an array as Cloud Native.",
   },{
     image: zeeshanH,
     title: "Zeeshan Hanif",
     designation: "Head of Software Development at Panacloud Pvt Ltd",
     details:
-      "Software development certified from IBM, SUN and Microsoft. Also passed Certified Management Accountant (CMA) examinations from Institute of Management Accountant (IMA), New Jersey and Level 2 of Chartered Financial Analyst (CFA), Charlottesville, Virginia.",
+      "Software development certified from IBM, SUN and Microsoft. Also passed Certified Management Accountant (CMA) examinations from Institute of Management Accountant (IMA).",
   },{
     image: adilA,
     title: "Adil Altaf",
     designation: "CEO at Axiom Enterprises",
     details:
-      "He have been working in the software industry for over a decade in which I have accumulated a vast amount of knowledge and experience in all areas of the Full Stack SDLC including architecture and design, development, implementation, integration, and deployment.",
+      "He have been working in the software industry for over a decade in which I have accumulated a vast amount of knowledge and experience in all areas of the Full Stack SDLC including architecture and design.",
   },{
     image: hiraK,
     title: "Hira Khan",
     designation: "Director at the Women Empowerment Div. of PIAIC",
     details:
-      "I am the Director of the Women Empowerment of the Presidential Initiative for Artificial Intelligence & Computing. The mission of PIAIC is to reshape Pakistan by revolutionizing education, research, and business by adopting latest, cutting-edge technologies.",
+      "I am the Director of the Women Empowerment of the Presidential Initiative for Artificial Intelligence & Computing. The mission of PIAIC is to reshape Pakistan by revolutionizing education.",
   },{
     image: asifS,
     title: "Asif Shah",
     designation: "International Council of Design Member",
     details:
-      "Communication Arts Annual Typography Award Discussion On Blog International Council of Design Member Communicator Awards Package Design Graphis Poster Design For Brand Barcode Marcom 2010 Platinum Awardsi2u design studio Wucht Fruit Flavored Water Ltd W3 Awards",
+      "Communication Arts Annual Typography Award Discussion On Blog International Council of Design Member Communicator Awards Package Design Graphis Poster Design For Brand Barcode.",
   },
 ];
 
 export const Faculty = () => {
   return (
-    <Box py="50px">
-      <Grid
+    <Box py="50px" bgColor="#DFD3BB" >
+      <Heading as='h1' textAlign='center'>Our Proud Faculty</Heading>
+      <Box bg='black' textAlign='center' width='50px' height='2px' margin='auto' mb='70px'></Box>
+      <Grid      
         templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(2, 1fr)"]}
-        gap={6}
+        gap={10}
+        px='30px'
       >
         {faculty.map((f) => {
           return (
             <GridItem>
               <Flex>
-                <Image src={f.image} alt={f.title} className="facultyImg" />
-                <Flex flexDirection="column" justifyContent="flex-start">
-                  <Text>{f.title}</Text>
-                  <Text>{f.designation}</Text>
+                <Image src={f.image} alt={f.title} className="facultyImg"/>
+                <Flex flexDirection="column" justifyContent="flex-start" gap='5px' px='10px'>
+                  <Text fontSize='1.3rem' fontWeight='bold'>{f.title}</Text>
+                  <Text fontSize='1.3rem'>{f.designation}</Text>
                   <Text>{f.details}</Text>
                 </Flex>
               </Flex>

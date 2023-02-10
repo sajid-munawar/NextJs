@@ -6,19 +6,19 @@ import { Box,Flex, Heading, Text } from "@chakra-ui/react";
 
 export const GettingReady = () => {
   return (
-    <Flex justifyContent="space-around" alignItems="center">
-      <Box maxWidth="50%">
+    <Flex justifyContent={['flex-start','flex-start',"space-around" ]}alignItems="center" flexDir={['column','column','row']}>
+      <Box maxWidth={['100%','100%',"50%"]} mt={['-50px','-20px','0']}>
         <Image
           src={gettingReady}
           alt="getting ready"
           className="gettingReady"
         />
       </Box>
-      <Box maxWidth="40%" padding="10px" textAlign="center">
+      <Box maxWidth={['100%','100%',"40%"]} py="10px" px='20px' textAlign="center">
         <Heading >
           Getting Ready for the Next Generation of the Internet
         </Heading>
-        <Text fontSize='2xl' pt='20px'>
+        <Text fontSize='2xl' pt='20px' >
           Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI), Cloud,
           Edge, Ambient Computing/IoT, Network Automation, and Bioinformatics
           Technologies{" "}

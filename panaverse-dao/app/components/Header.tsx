@@ -93,11 +93,11 @@ export const Header = () => {
           <Box>Mission</Box>
         </Flex>
       </Flex>
-      <Box textAlign="center" className="bgImage" mt="5px" height={"200px"} px='20px'>
+      <Box textAlign={['start','start',"center"]} className="bgImage" mt="5px" height={"200px"} px='20px'>
         <Heading as="h1" size={['lg','xl',"2xl"]} color="#000" pt="40px">
           Certified Web 3.0 and Metaverse Developer
         </Heading>
-        <Text color="#4c4f54" fontSize={['md','lg',"xl"]} pt="10px" pb="50px" >
+        <Text color="#4c4f54" fontSize={['md','lg',"xl"]} pt="10px" pb={['20px','30px',"50px"]} >
           A One and Quarter Years Panaverse DAO Earn as you Learn Program
         </Text>
       </Box>

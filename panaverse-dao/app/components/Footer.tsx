@@ -1,17 +1,32 @@
 "use client";
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text, Icon } from "@chakra-ui/react";
+import { Facebook } from "../assets/Facebook";
+import { Instagram } from "../assets/Instagram";
+import { Tiktok } from "../assets/Tiktok";
+import { Twitter } from "../assets/Twitter";
+import { Youtube } from "../assets/Youtube";
 
 export const Footer = () => {
   return (
     <>
-      <Box bgColor="#DFD3BB" py='50px'>
-        <Flex gap="20px" justifyContent="space-around" py="50px">
-          <Flex flexDirection="column" gap="5px">
-            <Box>1</Box>
-            <Box>2</Box>
-            <Box>3</Box>
-            <Box>4</Box>
-            <Box>5</Box>
+      <Box bgColor="#DFD3BB" py="50px">
+        <Flex
+          gap="20px"
+          justifyContent="space-around"
+          py="50px"
+          fontSize="17px"
+          fontWeight="500"
+          lineHeight="130%"
+        >
+          <Flex flexDirection="column" gap="10px">
+            <Heading as="h6" size="md" pb="20px">
+              Follow us
+            </Heading>
+            <Icon as={Facebook} />
+            <Icon as={Instagram} />
+            <Icon as={Tiktok} />
+            <Icon as={Twitter} />
+            <Icon as={Youtube} />
           </Flex>
           <Flex flexDirection="column" gap="5px">
             <Heading as="h6" size="md" pb="20px">
@@ -45,9 +60,11 @@ export const Footer = () => {
             <Text>Privacy policy</Text>
           </Flex>
         </Flex>
-        <Flex justifyContent='space-around' alignItems='center' pt='20px'>
-          <Text>Panaverse Dao,Inc</Text>
-          <Button size="lg" px='50px'>Join now</Button>
+        <Flex justifyContent="space-around" alignItems="center" pt="20px">
+          <Text>© Panaverse Dao,Inc</Text>
+          <Button size="lg" px="50px">
+            Join now
+          </Button>
         </Flex>
       </Box>
     </>

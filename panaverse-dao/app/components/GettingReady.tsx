@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import gettingReady from "../assets/gettingReady.jpg";
-import { Box, Card, CardHeader, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box,Flex, Heading, Text } from "@chakra-ui/react";
 
 export const GettingReady = () => {
   return (

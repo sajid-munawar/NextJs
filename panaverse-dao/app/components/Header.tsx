@@ -1,12 +1,21 @@
 "use client";
-import { Box, Flex, Heading, Spacer, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Spacer,
+  Text,
+  Button,
+  IconButton,
+} from "@chakra-ui/react";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "@chakra-ui/react";
 import panaverseDao from "../assets/logo.png";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { CloseIcon, ExternalLinkIcon, HamburgerIcon } from "@chakra-ui/icons";
 
 export const Header = () => {
+  const [display, changeDisplay] = useState("none");
   return (
     <>
       <Flex px="5%" py="1.2%">
@@ -44,6 +53,45 @@ export const Header = () => {
             </Link>
           </Box>
         </Flex>
+        <IconButton
+        aria-label="Open Menu"
+        size="lg"
+        mr="2"
+        bg='white'
+        icon={<HamburgerIcon />}
+        display={["flex", "flex", "flex", "none"]}
+        onClick={() => changeDisplay("flex")}
+      />
+      </Flex>
+      <Flex
+        w="100vw"
+        h="100vh"
+        bg="gray.50"
+        zIndex={20}
+        position="fixed"
+        top="0"
+        left="0"
+        overflow="auto"
+        flexDirection="column"
+        display={display}
+      >
+        <Flex justify="flex-end">
+          <IconButton
+            aria-label="Close Menu"
+            size="lg"
+            mt="2"
+            mr="10"
+            icon={<CloseIcon />}
+            onClick={() => changeDisplay("none")}
+          />
+        </Flex>
+
+        <Flex flexDir="column" align="center">
+          <Box>Courses</Box>
+          <Box>Faculty</Box>
+          <Box>About us</Box>
+          <Box>Mission</Box>
+        </Flex>
       </Flex>
       <Box textAlign="center" className="bgImage" mt="5px" height={"200px"}>
         <Heading as="h1" size="2xl" color="#000" pt="40px">
@@ -53,7 +101,6 @@ export const Header = () => {
           A One and Quarter Years Panaverse DAO Earn as you Learn Program
         </Text>
       </Box>
-      
     </>
   );
 };

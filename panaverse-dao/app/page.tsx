@@ -12,9 +12,10 @@ export default function Home() {
       <Header />
       <GettingReady />
       <Plan/>
-      <Alumni/>
       {/* <VideoSection/> */}
       <Faculty/>
+      <Alumni/>
+      <GettingReady />
       <Footer/>
     </>
   );

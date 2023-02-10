@@ -3,8 +3,8 @@ import { Faculty } from "./components/Faculty";
 import { Footer } from "./components/Footer";
 import { GettingReady } from "./components/GettingReady";
 import { Header } from "./components/Header";
+import { MetaverseMegic } from "./components/MetaverseMegic";
 import Plan from "./components/Plan";
-import { VideoSection } from "./components/VideoSection";
 
 export default function Home() {
   return (
@@ -12,10 +12,9 @@ export default function Home() {
       <Header />
       <GettingReady />
       <Plan/>
-      {/* <VideoSection/> */}
       <Faculty/>
       <Alumni/>
-      <GettingReady />
+      <MetaverseMegic />
       <Footer/>
     </>
   );

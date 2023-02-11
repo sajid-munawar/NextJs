@@ -5,7 +5,7 @@ import { Image } from "@chakra-ui/react";
 
 export const MetaverseMegic = () => {
   return (
-    <Grid templateColumns={['repeat(1, 1fr)','repeat(1, 1fr)','repeat(1, 1fr)','repeat(2, 1fr)']} gap={2} px='2em' py={['30px','30px','100px']}>
+    <Grid templateColumns={['repeat(1, 1fr)','repeat(1, 1fr)','repeat(1, 1fr)','repeat(2, 1fr)']} gap={2} px='2em' pb={['30px','30px','100px']}>
       <GridItem>
         <Image
           src="./metaverse_megic.png"

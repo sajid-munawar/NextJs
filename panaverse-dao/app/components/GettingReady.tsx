@@ -1,22 +1,8 @@
 "use client";
 import React from "react";
-// import Image from "next/image";
-import gettingReady from "../assets/gettingReady.jpg";
 import { Box, Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 
-// <Flex justifyContent={['flex-start','flex-start',"space-around" ]}alignItems="center" flexDir={['column','column','row']}>
-
-{
-  /* <Box maxWidth={['100%','100%',"50%"]} mt={['-50px','-20px','0']}>
-  <Image
-      src={gettingReady}
-      alt="getting ready"
-      className="gettingReady"
-      />
-    </Box> */
-}
-// </Flex>
 export const GettingReady = () => {
   return (
     <Grid templateColumns={['repeat(1, 1fr)','repeat(1, 1fr)','repeat(1, 1fr)','repeat(2, 1fr)']} gap={2} px='2em'>

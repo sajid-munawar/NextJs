@@ -9,26 +9,28 @@ import { Youtube } from "../assets/Youtube";
 export const Footer = () => {
   return (
     <>
-      <Box bgColor="#DFD3BB" py="50px">
+      <Box bgColor="#DFD3BB" pt={['20px','30px',"50px" ]} pb='50px' textAlign={'center'}>
         <Flex
         flexDir={['column','column','row']}
           gap="20px"
           justifyContent={['center','center',"space-around"]}
-          alignItems={['center','center',"space-around"]}
+          alignItems={['center','center',"start"]}
           py="50px"
           fontSize="17px"
           fontWeight="500"
           lineHeight="130%"
         >
-          <Flex flexDirection={['row','row',"column"]} gap="10px">
+          <Flex flexDirection="column" gap="10px">
             <Heading as="h6" size="md" pb="20px">
               Follow us
             </Heading>
+            <Flex flexDir={['row','row','column']} gap={3}>
             <Icon as={Facebook} />
             <Icon as={Instagram} />
             <Icon as={Tiktok} />
             <Icon as={Twitter} />
             <Icon as={Youtube} />
+            </Flex>
           </Flex>
           <Flex flexDirection="column" gap="5px">
             <Heading as="h6" size="md" pb="20px">

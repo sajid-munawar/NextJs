@@ -1,4 +1,5 @@
 "use client";
+import { MoonIcon, SearchIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
@@ -9,6 +10,7 @@ import {
   List,
   ListItem,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
 
 export default function Header() {
@@ -30,7 +32,15 @@ export default function Header() {
         </Box>
         {/* Right area */}
         <Box>
-          <Button variant={'outline'}>Go to PIAIC</Button>
+          <Box as="span">
+            <SearchIcon w="25" h="25" />
+          </Box>
+          <Box as="span" px="15">
+            <MoonIcon w="25" h="25" />
+          </Box>
+          <Link target={"_blank"} href="https://www.piaic.org/">
+            <Button variant={"outline"}>Go to PIAIC</Button>
+          </Link>
         </Box>
       </Flex>
     </Box>

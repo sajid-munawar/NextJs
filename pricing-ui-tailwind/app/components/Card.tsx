@@ -6,7 +6,7 @@ export default function Card() {
   return (
     <div className="flex justify-center flex-col md:flex-row pt-20 text-black mx-4 -mt-56 md:-mt-48">
       {/* left Box */}
-      <div className="bg-gray-200 p-12 rounded-t-xl md:rounded-l-xl shadow-lg text-center">
+      <div className="bg-gray-200 p-12 rounded-t-xl md:rounded-l-xl md:rounded-r-none shadow-lg text-center">
         <div className="font-bold text-2xl">Premium PRO</div>
         <span className="font-bold text-6xl mt-4">$329</span>
         <p className="mt-4">billed just once</p>
@@ -18,7 +18,7 @@ export default function Card() {
         </button>
       </div>
       {/* right Box */}
-      <div className="bg-white rounded-b-xl md:rounded-r-xl px-4 py-8 md:p-12 shadow-lg">
+      <div className="bg-white rounded-b-xl md:rounded-r-xl md:rounded-l-none px-4 py-8 md:p-12 shadow-lg">
         <p>
           Access these features when you get this pricing package for your
           business.

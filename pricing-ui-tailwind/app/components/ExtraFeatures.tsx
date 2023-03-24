@@ -6,7 +6,7 @@ import NosetupFee from "../Assets/noSetupFee";
 const ExtraFeatures = () => {
   return (
     <div>
-      <ul className="flex justify-center gap-8 my-14">
+      <ul className="flex justify-center flex-col md:flex-row gap-8 md:my-14 p-7">
         <li>
           <MoneyBack />
           <span className="properties">30 days money back Guarantee</span>

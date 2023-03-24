@@ -8,6 +8,6 @@
   }
 
   .properties {
-    @apply font-medium w-52
+    @apply font-bold md:w-52
   }
 }

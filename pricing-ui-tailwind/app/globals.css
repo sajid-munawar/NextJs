@@ -4,6 +4,10 @@
 
 @layer components {
   li {
-    @apply flex gap-3 mt-4
+    @apply flex gap-3 mt-4 items-center
+  }
+
+  .properties {
+    @apply font-medium w-52
   }
 }

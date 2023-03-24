@@ -4,11 +4,11 @@ import Tickmark from "../Assets/Tickmark";
 
 export default function Card() {
   return (
-    <div className="flex justify-center pt-20 text-black ">
+    <div className="flex justify-center pt-20 text-black -mt-48">
       {/* left Box */}
-      <div className="bg-gray-300 p-12 rounded-l-lg shadow-lg">
+      <div className="bg-gray-200 p-12 rounded-l-lg shadow-lg">
         <div className="font-bold text-2xl">Premium PRO</div>
-        <span className="font-bold text-6xl">$329</span>
+        <span className="font-bold text-6xl pt-4">$329</span>
         <p>billed just once</p>
         <button
           type="submit"

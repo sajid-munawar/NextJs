@@ -9,7 +9,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        MyName:["'Dancing Script', cursive;"],
+        cursive:["'Recursive', sans-serif;"]
+      }, //end of fontFamily
+    },
   },
   plugins: [],
 }

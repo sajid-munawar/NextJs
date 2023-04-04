@@ -96,13 +96,24 @@ export default function Home() {
         </a>
 
         <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
+      href='/parallel'
+        className={styles.card}
           rel="noopener noreferrer"
         >
           <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
+            Parallel <span>-&gt;</span>
+          </h2>
+          <p className={inter.className}>
+            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          </p>
+        </a>
+        <a
+      href='/sequential'
+        className={styles.card}
+          rel="noopener noreferrer"
+        >
+          <h2 className={inter.className}>
+            Sequential <span>-&gt;</span>
           </h2>
           <p className={inter.className}>
             Instantly deploy your Next.js site to a shareable URL with Vercel.

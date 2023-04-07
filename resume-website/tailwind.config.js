@@ -14,6 +14,7 @@ module.exports = {
         roboto:["'Roboto', sans-serif;"],
         crete:["'Crete Round', serif;"],
         poppins:["'Poppins', sans-serif;"],
+        inter:["'Inter', sans-serif;"],
       }, //end of fontFamily
       backgroundImage: {
         'hero-bg': "url('/bghero.png')",

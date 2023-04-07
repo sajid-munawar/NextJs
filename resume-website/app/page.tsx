@@ -5,8 +5,8 @@ import RecentWork from "./components/RecentWork";
 export default function Home() {
   return (
     <>
-    <Navbar />
-    <Hero/>
+    {/* <Navbar /> */}
+    {/* <Hero/> */}
     <RecentWork />
     </>
   )

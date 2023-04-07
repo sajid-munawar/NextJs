@@ -1,11 +1,13 @@
+
 import Link from 'next/link'
 import React from 'react'
 import { RxHamburgerMenu } from 'react-icons/rx';
+import Hamburger from '../Icons/Hamburger';
 
 const Navbar = () => {
   return (
-    <div className='flex p-4 text-white justify-center items-center'>
-        <h1 className='font-MyName text-2xl'>Sajid Munawar</h1>
+    <div className='flex p-4 text-white justify-center items-center bg-gray-700'>
+        <h1 className='font-roboto text-lg'>Sajid Munawar</h1>
         <div className='hidden  ml-auto md:flex gap-5 font-cursive font-medium'>
             <Link href="/" className='navbar-links'>Home</Link>
             <Link href="/" className='navbar-links'>Linkbout</Link>
@@ -13,7 +15,9 @@ const Navbar = () => {
             <Link href="/" className='navbar-links'>Skills</Link>
             <Link href="/" className='navbar-links'>Contact</Link>
         </div>        
-        <RxHamburgerMenu className='md:hidden ml-auto'/>
+        <div className='md:hidden ml-auto'>
+        <Hamburger/>
+        </div>
     </div>
   )
 }

@@ -17,7 +17,8 @@ module.exports = {
         inter:["'Inter', sans-serif;"],
       }, //end of fontFamily
       backgroundImage: {
-        'hero-bg': "url('/bghero.png')",
+        'herobg': "url('/bghero.png')",
+        'aboutmebg': "url('/bgaboutme.png')",
       }
     },
   },

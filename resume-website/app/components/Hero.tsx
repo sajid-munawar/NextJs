@@ -8,7 +8,7 @@ import Medium from "../Icons/Medium";
 const Hero = () => {
   return (
     <>
-      <div className="px-6 bg-gray-900 h-screen w-full bg-hero-bg bg-no-repeat bg-right-bottom">
+      <div className="px-6 bg-gray-900 h-screen w-full bg-herobg bg-no-repeat bg-right-bottom">
         <h1 className="text-5xl pt-32 max-w-xs font-crete text-orange-500">
           Hey There. <br /> I&prime;m Sajid.
         </h1>

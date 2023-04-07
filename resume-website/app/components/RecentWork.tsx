@@ -14,7 +14,7 @@ const RecentWork = () => {
           Simple Pricing Ui
         </h2>
         <p className="text-slate-800 font-inter tracking-wider">
-          If you're looking for a way to showcase your products or services and
+          If you&apos;re looking for a way to showcase your products or services and
           convert visitors into paying customers, a simple pricing UI can be a
           powerful tool for your business.
         </p>

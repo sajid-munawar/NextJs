@@ -22,7 +22,7 @@ const RecentWork = () => {
           <li className="p-3 border-gray-800 border-[1px] mr-3">NextJs</li>
           <li className="p-3 border-gray-800 border-[1px]">Tailwind CSS</li>
         </ul>
-        <button className="font-inter font-bold bg-orange-500 p-3 tracking-wider text-lg text-white">
+        <button className="font-inter font-bold bg-orange-500 p-3 mb-28 tracking-wider text-lg text-white">
           See project
         </button>
       </div>

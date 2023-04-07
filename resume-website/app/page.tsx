@@ -6,10 +6,11 @@ import RecentWork from "./components/RecentWork";
 export default function Home() {
   return (
     <>
-    {/* <Navbar />
+    <Navbar />
     <Hero/>
-    <RecentWork /> */}
+    <RecentWork />
     <AboutMe />
+    
     </>
   )
 }

@@ -1,4 +1,5 @@
 import AboutMe from "./components/AboutMe";
+import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import RecentWork from "./components/RecentWork";
@@ -10,9 +11,9 @@ export default function Home() {
     {/* <Navbar />
     <Hero/>
     <RecentWork />
-    <AboutMe /> */}
-    <TechStack />
-    
+    <AboutMe />
+    <TechStack /> */}
+    <Contact />    
     </>
   )
 }

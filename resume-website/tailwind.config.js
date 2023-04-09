@@ -11,9 +11,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        MyName:["'Dancing Script', cursive;"],
-        cursive:["'Recursive', sans-serif;"]
+        roboto:["'Roboto', sans-serif;"],
+        crete:["'Crete Round', serif;"],
+        poppins:["'Poppins', sans-serif;"],
+        inter:["'Inter', sans-serif;"],
       }, //end of fontFamily
+      backgroundImage: {
+        'herobg': "url('/bghero.png')",
+        'aboutmebg': "url('/bgaboutme.png')",
+      }
     },
   },
   plugins: [],

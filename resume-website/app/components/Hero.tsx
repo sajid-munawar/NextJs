@@ -1,29 +1,35 @@
 import React from "react";
+import GithubWhite from "../Icons/GithubWhite";
+import LinkedInWhite from "../Icons/LinkedInWhite";
+import AnglelistWhite from "../Icons/AnglelistWhite";
+import Twitter from "../Icons/Twitter";
+import Medium from "../Icons/Medium";
 
 const Hero = () => {
   return (
-    <div className="mx-auto max-w-4xl flex mt-10">
-      {/* Left side starts here */}
-      <div className="mx-8 max-w-lg self-center w-3/4  ">
-        <h1 className="text-white text-4xl">I am a Front End Developer</h1>
-        <p className="text-justify mt-4 text-gray-400">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-          provident, explicabo aspernatur repellendus magnam pariatur
-          perferendis aut voluptatem natus et? Dicta enim nostrum illum ad ipsam
-          officia obcaecati culpa veritatis cum facere, quis, perspiciatis
-          magnam quae quia sapiente iure, rerum vitae tempora sit eligendi
-          aliquid recusandae vero natus? Aut, cum.
+    <>
+      <div className="px-6 bg-gray-900 h-screen w-full bg-herobg bg-no-repeat bg-right-bottom">
+        <h1 className="text-5xl pt-32 max-w-xs font-crete text-orange-500">
+          Hey There. <br /> I&prime;m Sajid.
+        </h1>
+        <h2 className="font-roboto font-bold text-2xl text-white py-3">
+          I&prime;m a Software Developer
+        </h2>
+        <p className="text-white font-poppins ">
+          I can help you build a product &sbquo; feature or website Look through some
+          of my work and experience! If you like what you see and have a project
+          you need coded, don&prime;t hesitate to contact me.
         </p>
+        <div className="flex pt-3">
+          <GithubWhite />
+          <LinkedInWhite />
+          <AnglelistWhite />
+          <Twitter />
+          <Medium />
+        </div>
+
       </div>
-      {/* Left side ends here */}
-      {/* Right side starts here */}
-      <div>
-        <img
-          src="https://resume-template-gamma.vercel.app/images/car3.webp"
-          alt="dev"
-        />
-      </div>
-    </div>
+    </>
   );
 };
 

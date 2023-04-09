@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="px-6 py-20">
+    <div className="px-6 py-20" id="contact">
       <h1 className="text-cyan-900 text-3xl font-bold font-inter text-center w-[327px]">
         I&apos;m always <br /> interested in hearing about new projects, so if you&apos;d like to
         chat please get in touch.

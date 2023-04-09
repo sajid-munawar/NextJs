@@ -12,3 +12,8 @@
         @apply md:hover:scale-125 duration-500;
     }
 }
+@layer base {
+    html {
+      @apply scroll-smooth;
+    }
+  }

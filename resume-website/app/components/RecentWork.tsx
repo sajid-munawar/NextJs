@@ -2,7 +2,7 @@ import React from "react";
 
 const RecentWork = () => {
   return (
-    <div className="px-6">
+    <div className="px-6" id="portfolio">
       <h1 className="font-crete text-4xl text-gray-900 pt-32 pb-3">
         My Recent Works
       </h1>

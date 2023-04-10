@@ -8,26 +8,33 @@ import Medium from "../Icons/Medium";
 const Hero = () => {
   return (
     <>
-      <div className="px-6 bg-gray-900 h-screen w-full bg-herobg bg-no-repeat bg-right-bottom">
-        <h1 className="text-5xl pt-32 max-w-xs font-crete text-orange-500">
-          Hey There. <br /> I&prime;m Sajid.
-        </h1>
-        <h2 className="font-roboto font-bold text-2xl text-white py-3">
-          I&prime;m a Software Developer
-        </h2>
-        <p className="text-white font-poppins ">
-          I can help you build a product &sbquo; feature or website Look through some
-          of my work and experience! If you like what you see and have a project
-          you need coded, don&prime;t hesitate to contact me.
-        </p>
-        <div className="flex pt-3">
-          <GithubWhite />
-          <LinkedInWhite />
-          <AnglelistWhite />
-          <Twitter />
-          <Medium />
+      <div className="px-6 bg-gray-900 h-screen w-full bg-herobg lg:bg-desktophero bg-no-repeat bg-right-bottom lg:bg-right-top lg:bg-contain">
+        {/* div for desktop styles */}
+        <div className="lg:flex flex-row-reverse items-center justify-end">
+          {/* div for text content */}
+          <div className="lg:ml-24 max-w-lg lg:tracking-wider">
+            <h1 className="text-5xl lg:text-7xl pt-32 font-crete text-orange-500">
+              Hey There. <br /> I&prime;m Sajid.
+            </h1>
+            <h2 className="font-roboto font-bold text-2xl lg:text-3xl text-white py-3">
+              I&prime;m a Software Developer
+            </h2>
+            <p className="text-white font-poppins ">
+              I can help you build a product &sbquo; feature or website Look
+              through some of my work and experience! If you like what you see
+              and have a project you need coded, don&prime;t hesitate to contact
+              me.
+            </p>
+          </div>
+          {/* div for social icons */}
+          <div className="flex pt-3 lg:flex-col lg:mt-32">
+            <GithubWhite />
+            <LinkedInWhite />
+            <AnglelistWhite />
+            <Twitter />
+            <Medium />
+          </div>
         </div>
-
       </div>
     </>
   );

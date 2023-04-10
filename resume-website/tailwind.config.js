@@ -18,6 +18,7 @@ module.exports = {
       }, //end of fontFamily
       backgroundImage: {
         'herobg': "url('/bghero.png')",
+        'desktophero': "url('/bgdesktophero.png')",
         'aboutmebg': "url('/bgaboutme.png')",
       }
     },

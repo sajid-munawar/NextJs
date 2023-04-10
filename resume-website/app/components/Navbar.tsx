@@ -11,7 +11,7 @@ const Navbar = () => {
   };
   const MobilePopUp = () => {
     return (
-      <div className="font-inter text-4xl h-screen w-full fixed top-0 left-0 font-bold bg-gray-700 text-white md:hidden">
+      <div className="font-inter text-4xl h-screen w-full fixed top-0 left-0 font-bold bg-gray-700 text-white lg:hidden">
         <ul className="px-6 pt-20">
           <li>
             <a href="#portfolio" onClick={handleClicked}>
@@ -38,10 +38,10 @@ const Navbar = () => {
 
   return (
     <div className="flex p-4 text-white justify-center items-center bg-gray-700 w-full">
-      <h1 className="font-roboto text-lg md:ml-36 md:text-xl">Sajid Munawar</h1>
+      <h1 className="font-roboto text-lg lg:ml-36 lg:text-xl">Sajid Munawar</h1>
       {/* Desktop links starts here */}
 
-      <div className="hidden md:flex ml-auto mr-10">
+      <div className="hidden lg:flex ml-auto mr-10">
       <ul className="flex gap-10">
           <li>
             <a href="#portfolio">
@@ -61,7 +61,7 @@ const Navbar = () => {
         </ul>
       </div>
       {/* Desktop links ends here */}
-      <div className="md:hidden ml-auto z-20" onClick={handleClicked}>
+      <div className="lg:hidden ml-auto z-20" onClick={handleClicked}>
         {menuOpen ? <CloseButton /> : <Hamburger />}
       </div>
       {menuOpen && <MobilePopUp />}

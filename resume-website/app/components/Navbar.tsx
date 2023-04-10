@@ -37,12 +37,12 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex p-4 text-white justify-center items-center bg-gray-700 w-full">
+    <div className="flex p-4 text-white justify-center items-center bg-gray-700 w-full lg:fixed top-0">
       <h1 className="font-roboto text-lg lg:ml-36 lg:text-xl">Sajid Munawar</h1>
       {/* Desktop links starts here */}
 
-      <div className="hidden lg:flex ml-auto mr-10">
-      <ul className="flex gap-10">
+      <div className="hidden lg:flex ml-auto mr-20">
+      <ul className="flex gap-14 font-inter">
           <li>
             <a href="#portfolio">
               Portfolio

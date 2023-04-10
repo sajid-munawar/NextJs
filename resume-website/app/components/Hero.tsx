@@ -12,7 +12,7 @@ const Hero = () => {
         {/* div for desktop styles */}
         <div className="lg:flex flex-row-reverse items-center justify-end">
           {/* div for text content */}
-          <div className="lg:ml-24 max-w-lg lg:tracking-wider">
+          <div className="lg:ml-20 max-w-lg lg:tracking-wider">
             <h1 className="text-5xl lg:text-7xl pt-32 font-crete text-orange-500">
               Hey There. <br /> I&prime;m Sajid.
             </h1>
@@ -27,7 +27,7 @@ const Hero = () => {
             </p>
           </div>
           {/* div for social icons */}
-          <div className="flex pt-3 lg:flex-col lg:mt-32">
+          <div className="flex pt-3 lg:flex-col lg:mt-32 lg:pl-6">
             <GithubWhite />
             <LinkedInWhite />
             <AnglelistWhite />

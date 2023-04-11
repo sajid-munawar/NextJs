@@ -19,7 +19,9 @@ const AboutMe = () => {
           </button>
         </div>
       </div>
-      <div className="h-[1px] bg-gray-500"></div>
+      <div className="w-full bg-gray-900">
+        <div className="h-[1px] lg:h-[2px] mx-24 bg-gray-500"></div>
+      </div>
     </div>
   );
 };

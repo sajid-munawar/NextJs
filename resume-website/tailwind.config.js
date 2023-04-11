@@ -20,6 +20,7 @@ module.exports = {
         'herobg': "url('/bghero.png')",
         'desktophero': "url('/bgdesktophero.png')",
         'aboutmebg': "url('/bgaboutme.png')",
+        'aboutmebg2': "url('/aboutmedesktopbg.png')",
       }
     },
   },

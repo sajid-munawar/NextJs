@@ -2,14 +2,14 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="px-6 py-20" id="contact">
+    <div className="px-6 py-20 lg:flex gap-10  lg:py-36 lg:px-20" id="contact">
       <div className="flex justify-center">
-      <h1 className="text-cyan-900 text-3xl font-bold font-inter text-center w-[327px]">
-        I&apos;m always <br /> interested in hearing about new projects, so if you&apos;d like to
+      <h1 className="text-cyan-900 text-3xl lg:text-4xl lg:text-start font-bold font-inter text-center w-[327px] lg:w-[400px] lg:tracking-wider">
+        I&apos;m always <br className="lg:hidden" /> interested in hearing about new projects, so if you&apos;d like to
         chat please get in touch.
       </h1>
       </div>
-      <form id="form" action="https://formspree.io/f/myyodjdo" method="post">
+      <form id="form" action="https://formspree.io/f/myyodjdo" method="post" className="flex flex-col">
           <input
             type="text"
             placeholder="Full name"
@@ -17,7 +17,7 @@ const Contact = () => {
             id="fName"
             maxLength={30}
             required
-            className="mt-40 pl-3 border-none text-xl h-10"
+            className="mt-40 lg:mt-0 pl-3 border-none text-xl h-10"
           />
           <input
             type="email"

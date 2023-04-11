@@ -5,7 +5,7 @@ import SkillsRectangle from "../Icons/SkillsRectangle";
 
 const TechStack = () => {
   return (
-    <div className="flex  flex-col items-center text-white bg-gray-900 py-20">
+    <div className="flex  flex-col lg:flex-row lg:justify-between lg:items-start lg:px-20 items-center text-white bg-gray-900 py-20 lg:py-36">
       {/* languages */}
       <div>
         <div className="flex items-center">

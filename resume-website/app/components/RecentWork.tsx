@@ -1,4 +1,6 @@
 import React from "react";
+import SeeLive from "../Icons/SeeLive";
+import SeeSource from "../Icons/SeeSource";
 
 const RecentWork = () => {
   return (
@@ -27,9 +29,23 @@ const RecentWork = () => {
             <li className="p-3 border-gray-800 border-[1px] mr-3">NextJs</li>
             <li className="p-3 border-gray-800 border-[1px]">Tailwind CSS</li>
           </ul>
-          <button className="font-inter font-bold bg-orange-500 p-3 mb-28 tracking-wider text-lg text-white">
-            See project
-          </button>
+          <div className="flex gap-2 tracking-wider text-lg text-white">
+            <a
+              href="https://pricing-ui-tailwind-lake.vercel.app/"
+              target="_blank"
+              className="font-inter font-bold bg-orange-500 p-3 mb-28 flex items-center gap-1"
+            >
+              See Live
+              <SeeLive />
+            </a>
+            <a
+              href="https://github.com/sajid-munawar/NextJs/tree/main/pricing-ui-tailwind"
+              target="_blank"
+              className="font-inter font-bold bg-orange-500 p-3 mb-28 flex items-center gap-1"
+            >
+              See Source <SeeSource />
+            </a>
+          </div>
         </div>
       </div>
     </div>

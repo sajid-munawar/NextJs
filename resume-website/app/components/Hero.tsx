@@ -28,11 +28,21 @@ const Hero = () => {
           </div>
           {/* div for social icons */}
           <div className="flex pt-3 lg:flex-col lg:mt-32 lg:pr-6">
-            <GithubWhite />
-            <LinkedInWhite />
-            <AnglelistWhite />
-            <Twitter />
-            <Medium />
+            <a href="https://github.com/sajid-munawar" target="_blank">
+              <GithubWhite />
+            </a>
+            <a href="https://www.linkedin.com/in/sajid-munawar" target="_blank">
+              <LinkedInWhite />
+            </a>
+            <a href="https://wellfound.com/u/sajid-munawar-1" target="_blank">
+              <AnglelistWhite />
+            </a>
+            <a href="https://twitter.com/SajidMunawarDev" target="_blank">
+              <Twitter />
+            </a>
+            <a href="https://medium.com/@iamsajiddev" target="_blank">
+              <Medium />
+            </a>
           </div>
         </div>
       </div>

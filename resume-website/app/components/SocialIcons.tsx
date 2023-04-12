@@ -10,7 +10,7 @@ const SocialIcons = () => {
   return (
     <div>
       <div className="h-[1px] bg-gray-500 mt-20 lg:hidden"></div>
-      <div className="flex justify-center mt-3 mb-5 lg:mb-0 lg:py-10 lg:gap-6">
+      <div className="flex justify-center mt-3 mb-5 lg:mb-0 lg:py-10 lg:gap-3">
         <a href="https://github.com/sajid-munawar" target="_blank">
           <GitHubB />
         </a>

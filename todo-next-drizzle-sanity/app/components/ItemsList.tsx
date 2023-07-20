@@ -1,5 +1,6 @@
 import React from "react";
 import { Todo } from "../lib/drizzle";
+import DeleteItem from "./DeleteItem";
 
 const getData = async () => {
   const url = process.env.URL || "http://127.0.0.1:3000";
@@ -7,7 +8,6 @@ const getData = async () => {
     cache: "no-cache",
   });
   const data = await res.json();
-  console.log("data :>> ", data);
   return data;
 };
 const ItemsList = async () => {
@@ -23,7 +23,10 @@ const ItemsList = async () => {
             {/* circle */}
             <div className="rounded-full bg-seconday p-1"></div>
             {/* Text */}
-            {item.task}
+            <div>{item.task}</div>
+            <div className="ml-auto">
+              <DeleteItem id={item.id} />
+            </div>
           </div>
         ))}
     </>

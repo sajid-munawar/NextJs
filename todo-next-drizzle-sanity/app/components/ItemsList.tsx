@@ -1,24 +1,21 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Todo } from "../lib/drizzle";
 import DeleteItem from "./DeleteItem";
+import { cookies } from "next/headers";
+import { v4 as uuid } from "uuid";
 
+const getData = async () => {
+  const user_id = cookies().get("user_id")?.value;
+  const url = process.env.URL || "http://127.0.0.1:3000";
+  const id = 5;
+  const res = await fetch(`${url}/api/todo/?id=${user_id}`, {
+    cache: "no-cache",
+  });
+  const data = await res.json();
+  return data;
+};
 const ItemsList = async () => {
-  const [data, setData] = useState<Todo[] | null>(null);
-  const getData = async () => {
-    // const url = process.env.URL || "http://127.0.0.1:3000";
-    const res = await fetch(`http://127.0.0.1:3000/api/todo`, {
-      cache: "no-cache",
-    });
-    const result = await res.json();
-    setData(result);
-    console.log(data);
-    return data;
-  };
-  useEffect(() => {
-    getData();
-  }, []);
-  // const data: Todo[] = await getData();
+  const data: Todo[] = await getData();
   return (
     <>
       <div className="mb-4 max-h-96 overflow-y-auto px-2 pt-4">

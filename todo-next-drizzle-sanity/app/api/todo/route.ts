@@ -2,19 +2,19 @@ import { NextRequest, NextResponse } from "next/server";
 import { db, todoTable } from "@/app/lib/drizzle";
 import { sql } from "@vercel/postgres";
 import { eq } from "drizzle-orm";
-import { cookies } from 'next/headers'
+import { cookies } from "next/headers";
 import { v4 as uuid } from "uuid";
 
-
-
 export async function GET(request: NextRequest) {
+  const id = request.nextUrl.searchParams.get("id");
+  console.log("id :>> ", id);
   // const uid = cookies().get('user_id')?.value
-  const uid =cookies().get('user_id')?.value
-  console.log('uid', uid)
-  if(uid){
-  }else{
-    console.log('not found')
-  }
+  // const uid =cookies().get('user_id')?.value
+  // console.log('uid', uid)
+  // if(uid){
+  // }else{
+  //   console.log('not found')
+  // }
   try {
     await sql`CREATE TABLE IF NOT EXISTS Todos(id serial, Task varchar(255))`;
     const res = await db.select().from(todoTable);
@@ -44,7 +44,7 @@ export const POST = async (request: NextRequest) => {
 
 export async function DELETE(request: NextRequest) {
   try {
-    const id:any = request.nextUrl.searchParams.get('id')
+    const id: any = request.nextUrl.searchParams.get("id");
     await db.delete(todoTable).where(eq(todoTable.id, id)).execute();
     return NextResponse.json({ message: "Todo deleted successfully" });
   } catch (error) {

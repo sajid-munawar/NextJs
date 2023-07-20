@@ -19,7 +19,7 @@ const AddTodo = () => {
         });
         console.log(res.ok);
         (inputRef.current as HTMLInputElement).value = "";
-        toast("Task added successfully");
+        toast.success("Task added successfully");
         refresh();
       }
     } catch (error) {
@@ -28,6 +28,16 @@ const AddTodo = () => {
   };
   return (
     <>
+      <ToastContainer
+        position="top-center"
+        autoClose={4000}
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        rtl={false}
+        theme="light"
+      />
       <div>
         <form className="flex gap-3">
           <input
@@ -46,7 +56,6 @@ const AddTodo = () => {
           </button>
         </form>
       </div>
-      <ToastContainer />
     </>
   );
 };

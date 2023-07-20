@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import { NewTodo } from "../lib/drizzle";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddTodo = () => {
   const { refresh } = useRouter();

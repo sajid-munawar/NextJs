@@ -28,7 +28,6 @@ export const POST = async (request: NextRequest) => {
 export async function DELETE(request: NextRequest) {
   try {
     const id:any = request.nextUrl.searchParams.get('id')
-    console.log("id fromr outes", id);
     await db.delete(todoTable).where(eq(todoTable.id, id)).execute();
     return NextResponse.json({ message: "Todo deleted successfully" });
   } catch (error) {

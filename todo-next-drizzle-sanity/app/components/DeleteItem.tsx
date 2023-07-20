@@ -16,9 +16,8 @@ const DeleteItem = ({ id }: { id: number }) => {
         if (res.ok) {
           refresh();
           toast.success("Task deleted successfully");
-          const data = await res.json();
+          //   const data = await res.json();
           // Handle the response data here, if needed
-          console.log(data);
         } else {
           // Handle non-successful response (e.g., 404 Not Found)
           console.error("Error:", res.status, res.statusText);

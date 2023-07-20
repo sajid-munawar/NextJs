@@ -2,7 +2,7 @@ import React from "react";
 import { Todo } from "../lib/drizzle";
 
 const getData = async () => {
-  const res = await fetch("http://127.0.0.1:3000/api/todo", {
+  const res = await fetch(`${process.env.URL}/api/todo`, {
     cache: "no-cache",
   });
   const data = await res.json();

@@ -2,6 +2,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
+import Image from "next/image";
 
 const DeleteItem = ({ id }: { id: number }) => {
   const { refresh } = useRouter();
@@ -43,13 +44,13 @@ const DeleteItem = ({ id }: { id: number }) => {
         rtl={false}
         theme="light"
       />
-      <div>
-        <button
-          type="button"
-          className="shrink-0 rounded-full bg-gradient-to-b from-seconday to-primary p-2"
-          onClick={handleDelete}
-        ></button>
-      </div>
+      <Image
+        src="/icons8-delete.svg"
+        height="25"
+        width="25"
+        alt="delete"
+        onClick={handleDelete}
+      />
     </>
   );
 };

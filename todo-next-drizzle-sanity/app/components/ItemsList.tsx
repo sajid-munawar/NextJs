@@ -14,21 +14,23 @@ const ItemsList = async () => {
   const data: Todo[] = await getData();
   return (
     <>
-      {data &&
-        data.map((item: Todo) => (
-          <div
-            className="mb-3 flex w-full items-center gap-4 rounded-lg bg-white px-3 py-2"
-            key={item.id}
-          >
-            {/* circle */}
-            <div className="rounded-full bg-seconday p-1"></div>
-            {/* Text */}
-            <div>{item.task}</div>
-            <div className="ml-auto">
-              <DeleteItem id={item.id} />
+      <div className="mb-4 max-h-96 overflow-y-auto px-2 pt-4">
+        {data &&
+          data.map((item: Todo) => (
+            <div
+              className="mb-3 flex  w-full items-center gap-4 rounded-lg bg-white px-3 py-2"
+              key={item.id}
+            >
+              {/* circle */}
+              <div className="rounded-full bg-seconday p-1"></div>
+              {/* Text */}
+              <div>{item.task}</div>
+              <div className="ml-auto cursor-pointer">
+                <DeleteItem id={item.id} />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+      </div>
     </>
   );
 };

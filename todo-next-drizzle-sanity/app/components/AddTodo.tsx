@@ -20,12 +20,13 @@ const AddTodo = () => {
             method: "POST",
             body: JSON.stringify({ task: task }),
           });
-          console.log(res.ok);
-          (inputRef.current as HTMLInputElement).value = "";
-          toast.success("Task added successfully");
-          refresh();
-          setTask("");
-          setLoading(false);
+          if (res.ok) {
+            (inputRef.current as HTMLInputElement).value = "";
+            toast.success("Task added successfully");
+            refresh();
+            setTask("");
+            setLoading(false);
+          }
         }
       } catch (error) {
         console.log(error);

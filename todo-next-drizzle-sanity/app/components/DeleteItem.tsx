@@ -1,33 +1,30 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import Image from "next/image";
 
 const DeleteItem = ({ id }: { id: number }) => {
+  const [removing, setRemoving] = useState(false);
+
   const { refresh } = useRouter();
   const handleDelete = async () => {
+    setRemoving(true);
     try {
       if (id) {
         const res = await fetch(`/api/todo/?id=${id}`, {
           method: "DELETE",
         });
-
         if (res.ok) {
           refresh();
           toast.success("Task deleted successfully");
-          const data = await res.json();
-          // Handle the response data here, if needed
-          console.log(data);
         } else {
-          // Handle non-successful response (e.g., 404 Not Found)
           console.error("Error:", res.status, res.statusText);
         }
       } else {
         console.error('Error: "id" is missing or falsy.');
       }
     } catch (error) {
-      // Handle any other errors that occurred during the request
       console.error("Error:", error);
     }
   };
@@ -44,13 +41,17 @@ const DeleteItem = ({ id }: { id: number }) => {
         rtl={false}
         theme="light"
       />
-      <Image
-        src="/icons8-delete.svg"
-        height="25"
-        width="25"
-        alt="delete"
-        onClick={handleDelete}
-      />
+      {removing ? (
+        <Image src={"/loading.svg"} width={20} height={20} alt="saving" />
+      ) : (
+        <Image
+          src="/icons8-delete.svg"
+          height="25"
+          width="25"
+          alt="delete"
+          onClick={handleDelete}
+        />
+      )}
     </>
   );
 };

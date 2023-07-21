@@ -9,7 +9,10 @@ import { sql } from "@vercel/postgres";
 
 export const todoTable = pgTable("todos", {
   id:serial("id").primaryKey(),
-  task: varchar("task",{length:255}).notNull()
+  user_id: varchar("user_id", {
+    length: 255,
+  }).notNull(),
+  task: varchar("task",{length:255}).notNull(),
 });
 
 export type Todo = InferModel<typeof todoTable>;

@@ -11,6 +11,6 @@
 - TypeScript
 - Tailwind
 - Drizzle ORM
-- Vercel Postgres
+- Vercel Postgres SQL
   
 [See Live](https://todo-next-drizzle-sanity.vercel.app/)

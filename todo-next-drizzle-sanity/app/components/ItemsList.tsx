@@ -2,13 +2,12 @@ import React from "react";
 import { Todo } from "../lib/drizzle";
 import DeleteItem from "./DeleteItem";
 import { cookies } from "next/headers";
-import { v4 as uuid } from "uuid";
 
 const getData = async () => {
   const user_id = cookies().get("user_id")?.value;
   const url = process.env.URL || "http://127.0.0.1:3000";
   const id = 5;
-  const res = await fetch(`${url}/api/todo/?id=${user_id}`, {
+  const res = await fetch(`http://127.0.0.1:3000/api/todo/?id=${user_id}`, {
     cache: "no-cache",
   });
   const data = await res.json();

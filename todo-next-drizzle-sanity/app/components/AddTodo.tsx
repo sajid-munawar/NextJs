@@ -1,30 +1,36 @@
 "use client";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
-import { NewTodo } from "../lib/drizzle";
+import { cookies } from "next/headers";
+
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const AddTodo = () => {
   const { refresh } = useRouter();
-  const [task, setTask] = useState<NewTodo | null>(null);
+  const [task, setTask] = useState<string>("");
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleSubmit = async () => {
-    try {
-      if (task) {
-        const res = await fetch("/api/todo", {
-          method: "POST",
-          body: JSON.stringify({ task: task.task }),
-        });
-        console.log(res.ok);
-        (inputRef.current as HTMLInputElement).value = "";
-        toast.success("Task added successfully");
-        refresh();
+    if (task) {
+      try {
+        if (task) {
+          const res = await fetch("/api/todo", {
+            method: "POST",
+            body: JSON.stringify({ task: task }),
+          });
+          console.log(res.ok);
+          (inputRef.current as HTMLInputElement).value = "";
+          toast.success("Task added successfully");
+          refresh();
+          setTask("");
+        }
+      } catch (error) {
+        console.log(error);
       }
-    } catch (error) {
-      console.log(error);
+    } else {
+      toast.warn("Please write something to add");
     }
   };
   return (
@@ -46,7 +52,7 @@ const AddTodo = () => {
             placeholder="Write a new task"
             type="text"
             className="w-full rounded-full px-3 py-2 focus:outline-seconday"
-            onChange={(e) => setTask({ task: e.target.value })}
+            onChange={(e) => setTask(e.target.value)}
           />
           <button
             type="button"

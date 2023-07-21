@@ -18,18 +18,13 @@ const DeleteItem = ({ id }: { id: number }) => {
         if (res.ok) {
           refresh();
           toast.success("Task deleted successfully");
-          // setRemoving(false);
-          //   const data = await res.json();
-          // Handle the response data here, if needed
         } else {
-          // Handle non-successful response (e.g., 404 Not Found)
           console.error("Error:", res.status, res.statusText);
         }
       } else {
         console.error('Error: "id" is missing or falsy.');
       }
     } catch (error) {
-      // Handle any other errors that occurred during the request
       console.error("Error:", error);
     }
   };

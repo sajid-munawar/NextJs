@@ -9,7 +9,6 @@ import {
 export default function Navbar() {
   const { isAuthenticated, getUser } = getKindeServerSession();
   const user = getUser();
-  console.log("user :>> ", user);
 
   return (
     <nav className="flex justify-between items-center py-6 font-bold w-4/5 mx-auto bg-white">

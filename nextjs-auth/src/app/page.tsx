@@ -1,5 +1,7 @@
 // "use client";
 
+import MatchesClient from "./components/Matches-client";
+
 // import { useEffect } from "react";
 
 const getMatches = async () => {
@@ -19,14 +21,15 @@ const getMatches = async () => {
 };
 export default async function Home() {
   // useEffect(() => {
-  const data = await getMatches();
+  // const data = await getMatches();
   //   console.log("data1", data);
   // }, []);
 
   return (
     <section>
       <h1>Matches of Newcastle United FC</h1>
-      <ul>
+      <MatchesClient />
+      {/* <ul>
         {data &&
           data?.map((match: any) => (
             <li key={match.id}>
@@ -35,7 +38,7 @@ export default async function Home() {
               Status: {match.status}
             </li>
           ))}
-      </ul>
+      </ul> */}
     </section>
   );
 }

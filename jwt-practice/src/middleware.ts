@@ -6,7 +6,7 @@ import * as jose from "jose";
 export async function middleware(request: NextRequest) {
   const { pathname, origin } = request.nextUrl;
 
-  const headersToken = request.cookies.get("tokenn")?.value;
+  const headersToken = request.cookies.get("token")?.value;
   console.log("headersToken", headersToken);
 
   const secret = new TextEncoder().encode(process.env.SECRET_KEY);

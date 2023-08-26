@@ -5,7 +5,7 @@ import { cookies } from "next/headers";
 export const POST = async (request: NextRequest) => {
   const body = await request.json().catch(() => null);
 
-  if (body.email === "admin" && body.password === "admin") {
+  if (body.username === "admin" && body.password === "admin") {
     const secret = new TextEncoder().encode(process.env.SECRET_KEY);
 
     console.log("secret: ", secret);
@@ -22,8 +22,11 @@ export const POST = async (request: NextRequest) => {
       httpOnly: true,
     });
 
-    return NextResponse.json({ message: "Login successss" });
+    return NextResponse.json({ message: "Login successss", status: 200 });
   }
 
-  return NextResponse.json({ message: "Invalid Email or password" });
+  return NextResponse.json({
+    message: "Invalid Email or password",
+    status: 401,
+  });
 };

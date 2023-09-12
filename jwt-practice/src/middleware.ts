@@ -19,11 +19,11 @@ export async function middleware(request: NextRequest) {
         headersToken,
         secret
       );
-      const headers = new Headers(request.headers);
-      headers.set("user", JSON.stringify(payload.email));
-
-      console.log(protectedHeader);
+      console.log("protected header", protectedHeader);
       console.log("payload", payload);
+      const headers = new Headers(request.headers);
+      headers.set("user", JSON.stringify(payload.username));
+
       return NextResponse.next({
         request: {
           headers: headers,

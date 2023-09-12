@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const page = () => {
   const router = useRouter();
@@ -34,6 +35,7 @@ const page = () => {
         </label>
         <button type="submit">Submit</button>
       </form>
+      <Link href="/">Home</Link>
     </>
   );
 };
